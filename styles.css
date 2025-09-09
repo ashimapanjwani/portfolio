@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0;
+    padding-top: 5vw;
+    max-width: 50%;
+}
+
+.name {
+    font-size: clamp(4rem, 10vw, 10.5rem);
+    font-weight: 900;
+    color: transparent; /* Makes the text fill transparent */
+    -webkit-text-stroke-width: 2px; /* Sets the thickness of the outline */
+    -webkit-text-stroke-color: #333; /* Sets the color of the outline */
+}
+
+.services {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 300;
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: -0.08em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    
+    .name {
+        font-size: clamp(3.2rem, 12vw, 5rem);
+    }
+    
+    .services {
+        font-size: clamp(1.2rem, 4.5vw, 1.9rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    
+    .name {
+        font-size: clamp(2.5rem, 14vw, 4rem);
+    }
+    
+    .services {
+        font-size: clamp(1rem, 5.5vw, 1.5rem);
+    }
+}
